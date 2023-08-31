@@ -3,6 +3,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    width: 100%;
 }
 .title{
     font-size: 36px;
@@ -12,11 +14,6 @@ body{
 .pensao{
     width: 420px;
 }
-/* .pensao .passo1{
-    display: flex;
-}
-.pensao .passo2,.pensao .passo3,.pensao .passo4{
-} */
 .pensao .passoContainer{
     display: flex;
     flex-direction: column;
@@ -43,8 +40,7 @@ body{
     font-size: 16px;
     font-family: sans-serif;
     font-weight: 600;
-    margin-bottom: 4px;
-    padding-left: 16px;
+    margin: 0 0 4px 16px;
 }
 .pensao .passoContainer .line input{
     width: 100%;
@@ -52,13 +48,13 @@ body{
     border: 1px solid #000;
     border-radius: 12px;
     text-align: start;
-    padding-left: 6px;
     margin-bottom: 12px;
     font-size: 14px;
     font-weight: 600;
 }
 .pensao .passoContainer .line input::placeholder{
     color: #5e5e5e;
+    padding: 6px;
 }
 /* Chrome e outros */
 input::-webkit-outer-spin-button,
@@ -134,7 +130,6 @@ input[type=number] {
     border-radius:12px;
     width: 120px;
     height: 36px;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
@@ -142,6 +137,7 @@ input[type=number] {
     font-weight: 600;
     font-family: sans-serif;
     cursor: pointer;
+    border: none;
 }
 .buttonLine .btn:hover{
     background-color: #992222;
@@ -158,3 +154,25 @@ input[type=number] {
     display: none;
 }
 
+@media only screen and (max-width: 480px){
+    .title{
+        font-size: 32px;
+        text-align: center;
+    }
+    .pensao{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .pensao .passoContainer{
+        width: 90%;
+    }
+    .passos{
+        width: 90%;
+        margin: 36px 0 80px;
+    }
+    .buttonLine{
+        width: 100%;
+        justify-content: space-around;
+    }
+}
