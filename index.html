@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de pensão</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/mask.js"></script>
-    <script type="text/javascript" src="./js/indexFirebase.js"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -18,17 +17,9 @@
     })();
     </script>
 
-    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.2.0/firebase-analytics.js"></script>
-
 </head>
 
 <body>
-<style>
-
-
-</style>
 
     <h1 class="title">Formulário de pensão</h1>
 
@@ -247,7 +238,37 @@
         <span class="btn" id="btnEnvio" onclick="sendMail()">Enviar</span>
     </div>
 
-    
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js'
+
+        // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js'
+
+        // Add Firebase products that you want to use
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js'
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.3.0/firebase-firestore.js'
+    </script>
+
+    <script type="module">
+        // ...
+
+        // TODO: Replace the following with your app's Firebase project configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBSHB1eJnH0tjLUAnH1zCO6OPiF6vXf7Oc",
+            authDomain: "estudosgustavo-6e1d3.firebaseapp.com",
+            databaseURL: "https://estudosgustavo-6e1d3-default-rtdb.firebaseio.com",
+            projectId: "estudosgustavo-6e1d3",
+            storageBucket: "estudosgustavo-6e1d3.appspot.com",
+            messagingSenderId: "406516675856",
+            appId: "1:406516675856:web:ef422c6f5032f8ca9e6195",
+            measurementId: "G-916XVHZ5GB"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+</body>
     
 </body>
 </html>
