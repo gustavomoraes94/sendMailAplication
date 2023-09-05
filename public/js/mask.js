@@ -1,12 +1,12 @@
 function formatPhoneNumber(value){
-    if( !value) return value;
     const phoneNumber = value.replace(/[^\d]/g, '');
     const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
-    if (phoneNumber < 7) {
-        return `(${phoneNumber.slice(0,2)}) ${phoneNumber.slice(3)}`;
+    
+    if(phoneNumberLength  > 7){
+        return `(${phoneNumber.slice(0,2)}) ${phoneNumber.slice(2,7)}-${phoneNumber.slice(7,10)}`;
+    }else{
+        return phoneNumber;
     }
-    return `(${phoneNumber.slice(0,2)}) ${phoneNumber.slice(2,7)}-${phoneNumber.slice(7,10)}`;
 }
 
 function phoneNumberFormatter(){

@@ -43,18 +43,18 @@ body{
     margin: 0 0 4px 16px;
 }
 .pensao .passoContainer .line input{
-    width: 100%;
+    width: 90%;
     height: 36px;
     border: 1px solid #000;
     border-radius: 12px;
     text-align: start;
-    margin-bottom: 12px;
+    margin: 0 auto;
+    padding-left: 16px;
     font-size: 14px;
     font-weight: 600;
 }
 .pensao .passoContainer .line input::placeholder{
     color: #5e5e5e;
-    padding: 6px;
 }
 /* Chrome e outros */
 input::-webkit-outer-spin-button,
